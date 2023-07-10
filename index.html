@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recruitifie-FrontEnd-Assessment</title>
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+        }
+    
+        .top-container,
+        .bottom-container {
+          display: flex;
+          align-items: flex-start;
+        }
+    
+        .circle1{
+            background-color:#FFCA27;
+            border-radius : 50%;
+            width:3em;
+            height:3em;
+            line-height:3em;
+            
+            
+          }
+        
+          .circle2{
+            background-color:#172742;
+            border-radius : 50%;
+            width:3em;
+            height:3em;
+            line-height:3em;
+            
+          }
+
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 20px;
+          margin: 100px;
+          
+        }
+    
+        .grid-item {
+            border: 1px solid #ccc;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            color: grey;
+            display: flex;
+            flex-direction: column; 
+            align-items: flex-start;
+            justify-content: flex-start;
+            font-size: 20px;
+            background-color: transparent;
+            border-radius: 20px;
+            padding: 20px;
+        }
+
+        .dummy-root {
+            position: relative;
+            border: 2px solid black;
+            height: 100%;
+            width: 100%;
+            z-index: -50000;
+        }
+        
+        .union {
+            position: absolute;
+            top: 65vh;
+            left: -15vw;
+            width: 250vh;
+            height: 55vh;
+            transform: rotate(38deg);
+        }
+        
+        .boxy {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: left;
+            width: 30%;
+            margin: 0 3%;
+            padding: 0 1%;
+            box-sizing: border-box;
+            min-height: 400px;
+            overflow: hidden;
+        }
+        
+        .box {
+            background: #F4FAFE;
+            width: 400px;
+            height: 400px;
+            -webkit-border-radius: 50% / 60% 60% 40% 40%;
+            border-radius: 50% / 60% 60% 40% 40%;
+            transform: rotate(100deg);
+            /* border: 2px solid black; */
+        }
+        
+        
+        .wrap {
+            position: absolute;
+            left: 38%;
+            top: -80%;
+            width: 500px;
+            height: 260%;
+            transform: rotate(90deg);
+            overflow: hidden;
+        
+        }
+        
+        .object {
+            height: 100%;
+            width: 100%;
+            background: #F4FAFE;
+        }
+        
+        
+        
+        .object:before,
+        .object:after {
+            content: "";
+            background: #fff;
+            position: absolute;
+            width: 300px;
+            height: 100%;
+            border-radius: 60%;
+        }
+        
+        .object:before {
+            left: -51%;
+            top: -5%;
+            transform: rotate(-1deg);
+            height: 110%;
+            width: 90%;
+            border-right: 1px solid #F4FAFE;
+        }
+        
+        
+        .object:after {
+            right: -18%;
+            top: -6%;
+            transform: rotate(.7deg);
+            height: 110%;
+            width: 50%;
+            border-left: 1px solid #F4FAFE;
+        }
+
+      </style>
+
+</head>
+  <body>
+
+    <div class="dummy-root" style="opacity: 0.95;">
+        <div class="union">
+          <div class="boxy">
+            <div class="box"></div>
+          </div>
+          <div class="wrap">
+            <div class="object"></div>
+          </div>
+          <div class="boxy" style="float: right;">
+            <div class="box" style="transform: rotate(-90deg);"></div>
+          </div>
+        </div>
+      </div>
+
+      
+
+    <div class="top-container">
+        <canvas id="canvas" width="400" height="400" style="border:0px solid #d3d3d3;"></canvas>
+
+        <div class="grid">
+
+          <div class="grid-item"><div class="circle1"></div>
+            <h10 style="color: black;"> <b>  Application Tracking</b> </h10>
+            <ul>
+              <li>Stay updated, organized, succeed.</li>
+              <li>Real-time updates, centralized management.</li>
+              <li>Maximize dream job chances.</li>
+            </ul> </div>
+          <div class="grid-item"><div class="circle1"></div>
+            <h10 style="color: black;"> <b>  Real-Time Skill Assessment</b> </h10>
+            <ul>
+              <li>            Skill showcase, insights, job alignment.            </li>
+              <li>            Evaluate, certify, control career.            </li>
+              <li>            Empowering job seekers.</li>
+            </ul>
+</div>
+          <div class="grid-item"><div class="circle1"></div>
+          <h10 style="color: black;"> <b>  Career Counselling</b> </h10>
+            <ul>
+              <li>            Clarity, confidence, purpose:our counselling.</li>
+              <li>            Unlock potential, achieve goals: Personalised guidance.</li>
+              <li>            Job seekers empowered: Recruitifie career.</li>
+            </ul>
+</div>
+          <div class="grid-item"><div class="circle1"></div>
+          <h10 style="color: black;"> <b>  ATS- Friendly Resume Building</b> </h10>
+            <ul>
+              <li>Impress managers: Our ATS-friendly resumes.</li>
+              <li>Optimize visibility, unlock opportunities.</li>
+              <li>          Job seekers empowered: Resume builder.</li>
+            </ul>     
+  </div>
+        </div>
+      </div>
+    
+      <div class="bottom-container">
+        <div class="grid">
+          <div class="grid-item"><div class="circle2"></div>
+          <h10 style="color: black;">         <b>      Hiring Analysis     </b>    </h10>
+            <ul>
+              <li>Powerful analytics, valuable insights: Recruitifie.</li>
+              <li>Optimize hiring process with data.</li>
+              <li>        Track metrics, make informed decisions.</li>
+            </ul>     
+            </div>
+          <div class="grid-item"><div class="circle2"></div>
+          <h10 style="color: black;">      <b>       Real-Time Skill Assessment  </b>      </h10>
+            <ul>
+              <li>Skill showcase, insights, job alignment.</li>
+              <li>Evaluate, certify, control career.</li>
+              <li>       Empowering job seekers.</li>
+            </ul>     
+            </div>
+          <div class="grid-item"><div class="circle2"></div>
+          <h10 style="color: black;">     <b>        Free ATS and Integration    </b>    </h10>
+            <ul>
+              <li>Streamlined ATS: Simplify application management.</li>
+              <li>Centralize and organize candidate profiles.</li>
+              <li>       Securely review and filter candidates.</li>
+            </ul>        
+            </div>
+          <div class="grid-item"><div class="circle2"></div>
+          <h10 style="color: black;">   <b>       Advance Matching Algorithm     </b>  </h10>
+            <ul>
+              <li>            Advanced matching: Comprehensive candidate profiles.            </li>
+              <li>            Machine learning, AI: Analyzing skills.            </li>
+              <li>       Holistic understanding: Candidate capabilities.</li>
+            </ul>     
+            </div>
+        </div>
+        <canvas id="canvas2" width="400" height="400" style="border:0px solid #d3d3d3;"></canvas>
+
+      </div>
+      
+<script>
+
+    var canvas = document.getElementById('canvas'),
+    context = canvas.getContext('2d'),
+    NUM_POINTS = 8,
+    FONT_HEIGHT = 7,
+    MARGIN = 35,
+    POINT_SIZE = 10,
+    NUMERAL_SPACING = 10,
+    RADIUS = canvas.width/2 - MARGIN,
+    HAND_RADIUS = RADIUS + NUMERAL_SPACING,
+    CENTER_X = canvas.width/2,
+    CENTER_Y = canvas.height/2;
+    
+
+// Functions..........................................................
+
+function drawCircle() {
+   context.beginPath();
+   context.fillStyle = '#FFCA27'; 
+   context.arc(canvas.width/2, canvas.height/2,RADIUS, -2, Math.PI*2, true);
+   context.strokeStyle = '#b1b1b1';
+    context.lineWidth = '5'; 
+   context.stroke();
+}
+
+function setNums() {
+var tabNum = [],n=1;
+  while(n <= NUM_POINTS){
+    tabNum.push(n++);
+  }
+  return tabNum;
+}
+
+function drawPoint(angle, distance, number,color) {
+  const x = MARGIN + distance + (distance * Math.sin(angle - 10));
+  const y = MARGIN + distance + (distance * Math.cos(angle - 10));
+
+  context.beginPath();
+  context.arc(x, y, POINT_SIZE, 0, 2 * Math.PI);
+  context.fillStyle = color; 
+  context.fill();
+  
+  // Add numbering
+  context.fillStyle = '#000000'; // Set text color
+  context.font = '12px Arial'; // Set font and size
+  // Calculate text position for centering
+  const textWidth = context.measureText(number.toString()).width;
+  const textX = x - textWidth / 2;
+  const textY = y + 4; // Adjust as needed
+
+  context.fillText(number.toString(), textX, textY); // Draw text at calculated position
+}
+
+function drawNumerals() {
+ 
+var angle = 0, angleNum= 0;
+var numerals = [];
+var numeralWidth = 0;
+
+numerals = setNums();
+  var numbers = setNums();
+  
+  let ctr = 0;
+  numbers.reverse();
+  
+  // outer circle arc
+   context.beginPath();
+   context.fillStyle = '#FFCA27'; 
+  // arx(x,y,radius, start angle, endangle ,true)
+   context.arc(canvas.width/2, canvas.height/2,RADIUS, -1, Math.PI*2, true);
+   context.strokeStyle = '#b1b1b1';
+    context.lineWidth = '5'; 
+   context.stroke();
+  
+  // next arc
+   context.beginPath();
+   context.fillStyle = '#FFCA27'; 
+   context.arc(canvas.width/2, canvas.height/2,RADIUS, 20*(Math.PI/180),-110*(Math.PI/180), true);
+   context.strokeStyle = '#FFCA27';
+    context.lineWidth = '5'; 
+   context.stroke();
+  
+   numerals.forEach(function(numeral) {
+      angle        = Math.PI/(numerals.length/2) * numeral + .15 ;
+      drawPoint(angle, RADIUS, numbers[ctr],"#FFCA27")
+      if(  (angle >= 0) && (angle <= 300*(Math.PI/180) )  ){
+        drawPoint(angle, RADIUS, numbers[ctr],"#E2E8F0"); //E2E8F0
+      }
+       ctr++;
+     
+   });
+  // context.fillStyle = props.theme.text; // Set text color
+context.font = ' 500 20px  sans-serif'; // Set font and size
+context.textAlign = 'center'; // Center the text horizontally
+context.textBaseline = 'middle'; // Center the text vertically
+context.fillText("Job Seeker", canvas.width/2, canvas.height/2);
+}
+
+function drawCenter() {
+   context.beginPath();
+   context.fillStyle = '#FFCA27'; 
+   context.arc(canvas.width/2, canvas.height/2, 120, 0, Math.PI*2, true);
+   context.fill();
+}
+
+function drawHand(pos) {
+   var angle = (Math.PI*2) * (pos/NUM_POINTS) - Math.PI/2;
+   
+   context.moveTo(canvas.width/2, canvas.height/2);
+   context.lineTo(canvas.width/2 + Math.cos(angle)*RADIUS,
+                  canvas.height/2 + Math.sin(angle)*RADIUS);
+   context.stroke();
+}
+
+function drawRadius() {
+   drawHand(20);
+}
+
+function drawMain() {
+   context.clearRect(0,0,canvas.width,canvas.height);
+
+   // drawCircle();
+   drawCenter();
+   drawNumerals();
+   // drawHand();
+}
+
+
+// Initialization................................................
+
+context.font = FONT_HEIGHT + 'px Arial';
+drawMain();
+
+// recruiter circle
+
+var canvas2 = document.getElementById("canvas2"),
+  context2 = canvas2.getContext("2d");
+
+// Functions..........................................................
+
+function drawCircle2() {
+  context2.beginPath();
+  context2.fillStyle = "#172742";
+  context2.arc(
+    canvas2.width / 2,
+    canvas2.height / 2,
+    RADIUS,
+    -2,
+    Math.PI * 2,
+    true
+  );
+  context2.strokeStyle = "#b1b1b1";
+  context2.lineWidth = "5";
+  context2.stroke();
+}
+
+function setNums2() {
+  var tabNum = [],
+    n = 1;
+  while (n <= NUM_POINTS) {
+    tabNum.push(n++);
+  }
+  return tabNum;
+}
+
+function drawPoint2(angle, distance, number, color) {
+  const x = MARGIN + distance + distance * Math.sin(angle - 10);
+  const y = MARGIN + distance + distance * Math.cos(angle - 10);
+
+  context2.beginPath();
+  context2.arc(x, y, POINT_SIZE, 0, 2 * Math.PI);
+  context2.fillStyle = color;
+  context2.fill();
+
+  // Add numbering
+  context2.fillStyle = "#000000"; // Set text color
+  context2.font = "12px Arial"; // Set font and size
+  // Calculate text position for centering
+  const textWidth = context2.measureText(number.toString()).width;
+  const textX = x - textWidth / 2;
+  const textY = y + 4; // Adjust as needed
+
+  context2.fillText(number.toString(), textX, textY); // Draw text at calculated position
+}
+
+function drawNumerals2() {
+  var angle = 0,
+    angleNum = 0;
+  var numerals = [];
+  var numeralWidth = 0;
+
+  numerals = setNums2();
+  var numbers = setNums2();
+
+  let ctr = 0;
+  numbers.reverse();
+
+  // outer circle arc
+  context2.beginPath();
+  context2.fillStyle = "#172742";
+  // arx(x,y,radius, start angle, endangle ,true)
+  context2.arc(canvas2.width / 2,
+    canvas2.height / 2,
+    RADIUS,
+    -1,
+    Math.PI * 2,
+    true
+  );
+  context2.strokeStyle = "#b1b1b1";
+  context2.lineWidth = "5";
+  context2.stroke();
+
+  // next arc
+  context2.beginPath();
+  context2.fillStyle = "#172742";
+  context2.arc(
+    canvas2.width / 2,
+    canvas2.height / 2,
+    RADIUS,
+    20 * (Math.PI / 180),
+    -110 * (Math.PI / 180),
+    true
+  );
+  context2.strokeStyle = "#172742";
+  context2.lineWidth = "5";
+  context2.stroke();
+
+  numerals.forEach(function (numeral) {
+    angle = (Math.PI / (numerals.length / 2)) * numeral + 0.15;
+    drawPoint2(angle, RADIUS, numbers[ctr], "#172742");
+    if (angle >= 0 && angle <= 300 * (Math.PI / 180)) {
+      drawPoint2(angle, RADIUS, numbers[ctr], "#E2E8F0"); //E2E8F0
+    }
+    ctr++;
+  });
+  // context2.fillStyle = props.theme.text; // Set text color
+  context2.font = " 500 20px  sans-serif"; // Set font and size
+  context2.textAlign = "center"; // Center the text horizontally
+  context2.textBaseline = "middle"; // Center the text vertically
+  context2.fillStyle = 'white'; // Set font color to white
+  context2.fillText("Recruiter", canvas2.width / 2, canvas2.height / 2);
+}
+
+function drawCenter2() {
+  context2.beginPath();
+  context2.fillStyle = "#172742";
+  context2.arc(canvas2.width / 2, canvas2.height / 2, 120, 0, Math.PI * 2, true);
+  context2.fill();
+}
+
+function drawHand2(pos) {
+  var angle = Math.PI * 2 * (pos / NUM_POINTS) - Math.PI / 2;
+
+  context2.moveTo(canvas2.width / 2, canvas2.height / 2);
+  context2.lineTo(
+    canvas2.width / 2 + Math.cos(angle) * RADIUS,
+    canvas2.height / 2 + Math.sin(angle) * RADIUS
+  );
+  context2.stroke();
+}
+
+function drawRadius2() {
+  drawHand2(20);
+}
+
+function drawMain2() {
+  context2.clearRect(0, 0, canvas2.width, canvas2.height);
+  drawCenter2();
+  drawNumerals2();
+}
+
+context2.font = FONT_HEIGHT + "px Arial";
+
+drawMain2();
+
+</script>
+  </body>
+</html>
