@@ -20,10 +20,14 @@ templates/ - HTML templates
 ## Development
 To run the project in a development environment:
 
-- Ensure that you have completed the installation steps mentioned above.
+- Ensure that you have completed the installation steps for Django and Python.
+
+- Use the following command to create a new Django project:
+  django-admin startproject project_name
+
 
 - Start the Django development server:
-python manage.py runserver
+  python manage.py runserver
 
 - Access the web page at http://localhost:8000 in your web browser.
 
